@@ -42,13 +42,13 @@ jobs:
 #          name: upload-thingsboard
 #          path: application/target/thingsboard.deb
       - name: Create file
-        run: echo "Hello, world!" > example.txt
+        run: echo "Hello, world!" > example.deb
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
             name: my-artifact
-            path: example.txt
+            path: example.deb
 
 
 
@@ -75,8 +75,8 @@ jobs:
             git branch
             git config --global user.email "habib.ahasan@selise.ch"
             git config --global user.name "ahasanhabib85"
-            git lfs track "*.txt"
-            git add example.txt
+            git lfs track "*.deb"
+            git add example.deb
             git commit -m "Add large file"
             git push origin main
 
