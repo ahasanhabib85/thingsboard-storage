@@ -78,7 +78,6 @@ jobs:
             git lfs track "*.txt"
             git add example.txt
             git commit -m "Add large file"
-            git pull origin main
             git push origin main
 
 #      - name: Install Git
